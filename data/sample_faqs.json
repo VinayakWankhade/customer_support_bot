@@ -1,0 +1,32 @@
+[
+    {
+        "id": "faq_password_reset",
+        "question": "How do I reset my password?",
+        "answer": "To reset your password, click on 'Forgot Password' on the login page. Enter your email address and follow the instructions sent to your inbox. The link expires in 24 hours.",
+        "category": "Account"
+    },
+    {
+        "id": "faq_billing_update",
+        "question": "How can I update my billing information?",
+        "answer": "Go to settings > Billing & Subscription. Click 'Update Payment Method' to add a new card or modify existing details. Changes take effect properly immediately.",
+        "category": "Billing"
+    },
+    {
+        "id": "faq_refund_policy",
+        "question": "What is your refund policy?",
+        "answer": "We offer a full refund within 30 days of purchase if you are not satisfied. Contact support with your order ID to process the request. Refunds take 5-10 business days.",
+        "category": "Billing"
+    },
+    {
+        "id": "faq_contact_support",
+        "question": "How do I contact human support?",
+        "answer": "You can reach our support team 24/7 via this chat (just ask for a human) or email support@example.com. For urgent issues, call +1-800-123-4567.",
+        "category": "General"
+    },
+    {
+        "id": "faq_api_access",
+        "question": "Where can I find my API keys?",
+        "answer": "API keys are located in the Developer Dashboard under settings. Do not share your keys publicly.",
+        "category": "Developer"
+    }
+]

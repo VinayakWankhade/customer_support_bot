@@ -1,0 +1,36 @@
+# Core Framework
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# Database
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+alembic>=1.13.0
+
+# Redis
+redis>=5.0.0
+
+# LLM - Google Gemini
+google-generativeai>=0.3.0
+
+# Vector Database - FAISS
+numpy<2.0.0
+faiss-cpu
+sentence-transformers
+
+# Utilities
+python-dotenv
+python-multipart
+httpx
+
+# Testing
+pytest
+pytest-asyncio
+pytest-cov
+
+# Development
+black
+flake8
+mypy
