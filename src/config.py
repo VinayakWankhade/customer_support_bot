@@ -27,7 +27,7 @@ class Settings(BaseSettings):
         return [origin.strip() for origin in self.cors_origins.split(",")]
     
     # LLM Settings
-    llm_model: str = "gemini-pro"
+    llm_model: str = "gemini-2.5-flash"
     llm_temperature: float = 0.2
     llm_max_tokens: int = 1024
     confidence_threshold: float = 0.4

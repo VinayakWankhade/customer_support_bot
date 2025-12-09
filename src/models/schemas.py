@@ -22,6 +22,16 @@ class SessionResponse(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
 
+class SessionSummary(BaseModel):
+    """Schema for session list summary"""
+    id: UUID
+    created_at: datetime
+    last_active_at: datetime
+    session_metadata: Dict[str, Any] = Field(default_factory=dict, serialization_alias="metadata")
+    
+    model_config = ConfigDict(from_attributes=True)
+
+
 class MessageResponse(BaseModel):
     """Response schema for a single message"""
     id: UUID

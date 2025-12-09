@@ -13,6 +13,7 @@ export const api = {
     // Session
     createSession: (userId) => client.post('/session', { user_id: userId }),
     getSessionHistory: (sessionId) => client.get(`/session/${sessionId}/history`),
+    getSessions: () => client.get('/session'),
 
     // Chat
     sendMessage: (sessionId, message, stream = false) =>

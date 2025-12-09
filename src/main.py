@@ -17,6 +17,7 @@ async def lifespan(app: FastAPI):
     # Startup
     print("🚀 Initializing AI Customer Support Bot...")
     init_db()
+    print(f"DEBUG: Loaded LLM Model: {settings.llm_model}")
     print("✅ Database initialized")
     yield
     # Shutdown
@@ -72,7 +73,6 @@ from fastapi.staticfiles import StaticFiles
 
 if os.path.exists("frontend/dist"):
     app.mount("/", StaticFiles(directory="frontend/dist", html=True), name="static")
-
 
 
 if __name__ == "__main__":

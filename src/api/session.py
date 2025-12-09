@@ -12,7 +12,8 @@ from src.models.schemas import (
     SessionCreate,
     SessionResponse,
     SessionHistoryResponse,
-    MessageResponse
+    MessageResponse,
+    SessionSummary
 )
 
 router = APIRouter(prefix="/session", tags=["Session"])
@@ -56,6 +57,24 @@ async def create_session(
         session_id=new_session.id,
         created_at=new_session.created_at
     )
+
+
+@router.get("", response_model=List[SessionSummary])
+async def list_sessions(
+    limit: int = 50,
+    db: Session = Depends(get_db_dependency)
+):
+    """
+    List recent sessions
+    """
+    try:
+        sessions = db.query(SessionModel).order_by(
+            SessionModel.last_active_at.desc()
+        ).limit(limit).all()
+        return sessions
+    except Exception as e:
+        print(f"DEBUG: Error listing sessions: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 @router.get("/{session_id}/history", response_model=SessionHistoryResponse)
